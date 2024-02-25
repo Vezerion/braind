@@ -1,0 +1,134 @@
+.header, .footer
+    width: 100%
+    background-color: #323c46
+    height: 90px
+    color: #fff
+    text-align: center
+    line-height: 90px
+    font-weight: 500
+    font-size: 24px
+
+.content
+    max-width: 768px
+    margin: 10px auto
+    padding: 0 12px
+    display: flex
+    flex-direction: column
+    &__grid__item
+        display: flex
+        span
+            align-self: flex-end
+    &__grid-1
+        width: 100%
+        display: grid
+        grid-template-areas: 'square-big square-1' 'square-big square-2'
+        grid-template-columns: minmax(211px, 492px) minmax(102px, 241px)
+        grid-template-rows: repeat(2, 241px)
+        gap: 10px
+        margin-bottom: 10px
+        &__item-1
+            grid-area: square-big
+            aspect-ratio: 1 / 1
+            & span
+                align-self: flex-start
+                text-align: center
+                text-wrap: pretty
+        &__item-2
+            grid-area: square-1
+        &__item-3
+            grid-area: square-2
+    &__grid-2
+        width: 100%
+        display: grid
+        grid-template-areas: 'rectangle-1 rectangle-2 rectangle-3' 'rectangle-big rectangle-big rectangle-4'
+        grid-template-columns: repeat(3, minmax(102px, 241px))
+        grid-template-rows: repeat(2, 155px)
+        gap: 10px
+        margin-bottom: 10px
+        &__item-1
+            grid-area: rectangle-1
+        &__item-2
+            grid-area: rectangle-2
+        &__item-3
+            grid-area: rectangle-3
+        &__item-4
+            grid-area: rectangle-big
+        &__item-5
+            grid-area: rectangle-4
+    &__grid-3
+        width: 100%
+        display: grid
+        grid-template-areas: 'square-1 square-big' 'square-2 square-big'
+        grid-template-columns: minmax(102px, 241px) minmax(211px, 492px)
+        grid-template-rows: repeat(2, 241px)
+        gap: 10px
+        margin-bottom: 10px
+        &__item-1
+            grid-area: square-1
+        &__item-2
+            grid-area: square-big
+            aspect-ratio: 1 / 1
+        &__item-3
+            position: relative
+            grid-area: square-2
+            cursor: pointer
+            padding: 0px
+            span
+                position: absolute
+                color: #fff
+                bottom: 15px
+                left: 15px
+            &__picture
+                width: 100%
+                object-fit: cover
+            &:hover
+                .content__grid-3__item-3__picture
+                    filter: blur(4px)
+                .content__grid-3__item-3__img__wrapper
+                    display: block
+            &__img
+                width: 100%
+                &__wrapper
+                    position: absolute
+                    top: calc( 50% - 30px )
+                    right: calc( 50% - 30px )
+                    width: 61px
+                    height: 61px
+                    display: none
+    &__grid-4
+        width: 100%
+        display: grid
+        grid-template-areas: 'rectangle-1 rectangle-big rectangle-big' 'rectangle-2 rectangle-3 rectangle-4'
+        grid-template-columns: repeat(3, minmax(102px, 241px))
+        grid-template-rows: repeat(2, 155px)
+        gap: 10px
+        margin-bottom: 10px
+        &__item-1
+            grid-area: rectangle-1
+        &__item-2
+            grid-area: rectangle-big
+        &__item-3
+            grid-area: rectangle-2
+        &__item-4
+            grid-area: rectangle-3
+        &__item-5
+            grid-area: rectangle-4
+.contents
+    padding: 0
+    margin: 0
+    list-style-type: none
+    width: 100%
+    height: 50%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    & li
+        border-bottom: 2px dotted #71787F
+        padding: 0
+        display: flex
+        justify-content: space-between
+        width: 100%
+.answer, .question
+    margin-bottom: -5px
+    padding: 0 5px
+    background-color: #C3F3E2

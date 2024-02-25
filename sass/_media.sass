@@ -1,0 +1,25 @@
+@media (max-width: 480px)
+    body
+        width: 100%!important
+    .content
+        max-width: 320px
+        padding: 0
+        &__grid-3
+            display: none
+        &__grid-1
+            order: 2
+            grid-template-columns: minmax(100px, 212px) minmax(102px, 102px)
+            grid-template-rows: repeat(2, 102px)
+            gap: 6px
+            &__item-1
+                overflow-y: scroll
+        &__grid-2
+            order: 1
+            grid-template-areas: 'rectangle-1 rectangle-2' 'rectangle-big rectangle-big' 'rectangle-3 rectangle-4'
+            grid-template-columns: repeat(2, minmax(102px, 155px))
+            grid-template-rows: repeat(3, 155px)
+        &__grid-4
+            order: 3
+            grid-template-areas: 'rectangle-big rectangle-big' 'rectangle-3 rectangle-4' 'rectangle-1 rectangle-2'
+            grid-template-columns: repeat(2, minmax(102px, 155px))
+            grid-template-rows: repeat(3, 155px)

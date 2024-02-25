@@ -1,0 +1,42 @@
+.overlay
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    background-color: rgba(0, 0, 0, .56)
+.modal
+    width: 500px
+    height: 452px
+    background-color: #fff
+    margin: 0 auto
+    margin-top: 10%
+    &__close__wrapper
+        width: 24px
+        height: 24px
+        cursor: pointer
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 30px
+        &__paragraph-2
+            margin-top: 30px
+            height: 124px
+            &__text
+                margin-top: 20px
+        &__paragraph-1
+            height: 168px
+            &__text
+                margin-top: 20px
+    &__header
+        display: flex
+        justify-content: space-between
+        padding: 20px 30px  
+        font-weight: 600
+        font-size: 24px
+        border-bottom: 1px solid #E5E5E5
+        height: 69px
+
+.active
+    display: block
